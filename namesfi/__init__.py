@@ -29,11 +29,11 @@ def get_first_name(gender=None):
         gender = random.choice(('female', 'male'))
     if gender not in ('female', 'male'):
         raise ValueError("Value not 'female' or 'male'")
-    return get_name(FILES['first:%s' % gender]).capitalize()
+    return get_name(FILES['first:%s' % gender])
 
 
 def get_last_name():
-    return get_name(FILES['last']).capitalize()
+    return get_name(FILES['last'])
 
 
 def get_full_name(gender=None):
